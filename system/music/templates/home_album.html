@@ -1,0 +1,25 @@
+
+{% load static %}
+<div class = "container">
+	<div class="row">
+		{% for x in items %}
+		<div class="col-sm-4">
+			<div class="card" style="width: 18rem;">
+				  <div class="card-body">
+				    <h5 class="card-title"><strong>Album : </strong> {{ x.album_title }}</h5>
+				     <hr class="my-4">
+				    <img class="card-img-top" src="{% static "images/banner.jpg" %}"><hr class="my-4">
+				    <h6 class="card-subtitle mb-2 text-muted"><strong> Artist <i class="far fa-user-circle"></i> </strong>{{ x.artist }}</h6>
+				    <hr class="my-4">
+				   <p class="card-text">Released on <strong><i class="far fa-calendar-alt"></i> {{ x.publication_year }}</strong> </p>
+				   <p class="card-text">Album Type : <strong>{{ x.album_genre }}</strong></p>
+				    <p class="card-text"><strong>Description : </strong>{{ x.album_description }}</p>
+				    <a href="{{ x.album_url }}"><button type="button" class="btn btn-outline-danger"><i class="fas fa-arrow-alt-circle-down"></i> DOWNLOAD FULL ALBUM</button></a>
+				   
+				  </div>
+			  </div>
+			  </br>
+		</div>
+		{% endfor %}
+	</br>
+</div>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "nav.html" %}
+</br>
+</br>
+</br>
+</br>
+</br>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card" style="width: 16rem;">
+			  <div class="card-body">
+			    <h5 class="card-title">Add Song</h5>
+			    <hr class="my-4">
+					<div class="form-group">
+					<form method="POST"> {% csrf_token %}
+						{{ form.as_p}}
+						<button class="btn btn-danger" type="submit" value="save">ADD SONG</button>
+					</form>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

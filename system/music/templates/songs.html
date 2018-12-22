@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+{% include "nav.html" %}
+</br>
+</br>
+</br>
+</br>
+<div class = "container">
+	<div class="row">
+		{% for c in objective %}
+		<div class="col-sm">
+			<div class="card text-center" style="width: 18rem;">
+				<img class="card-img-top" src="{% static "images/favicon.png" %}"><hr class="my-4">
+				  <div class="card-body">
+				  	<p class="card-text"><strong>{{ c.song_title }}</strong></p>
+				    <p class="card-text">File : {{ c.file_type }}</p>
+				    
+				    <a href="{{ c.song_url }}"><button type="button" class="btn btn-danger"><i class="fas fa-arrow-alt-circle-down"></i> Download Full Song </button></a>
+				    
+				  </div>
+			  </div>
+			  </br>
+		</div>
+		{% endfor %}
+	</br>
+	</div>
+</div>
+
+{% include "footer.html" %}
+
+{% endblock %}

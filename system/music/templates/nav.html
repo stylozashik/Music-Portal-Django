@@ -1,0 +1,27 @@
+{% load static %}
+<style type="text/css">
+  .logo{
+    height: 35px;
+    width: auto;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+     <a class="navbar-brand" href="http://127.0.0.1:8000"><img class="logo" src="{% static "images/logo.png" %}"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/songs/"><i class="fas fa-music"></i> Download Songs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/addsong/"><i class="fas fa-plus"></i> Add Song</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/create/"><i class="fas fa-compact-disc"></i> Create Album</a>
+          </li>
+        </ul>
+        <a href="http://127.0.0.1:8000/contact/"><button class="btn btn-danger my-2 my-sm-0" ><i class="fas fa-envelope"></i> Contact</button></a>
+      </div>
+</nav>
